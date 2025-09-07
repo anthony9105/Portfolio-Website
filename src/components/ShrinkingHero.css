@@ -1,0 +1,10 @@
+.titleText {
+    padding: 10px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.titleTextName {
+    padding: 10px;
+    color: rgba(255, 255, 255, 0.7);
+    text-shadow: 2.5px 2.5px 5px rgba(43, 0, 255, 0.5);
+}
