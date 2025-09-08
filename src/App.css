@@ -45,6 +45,6 @@ html, body, #root {
   height: 100%;
   margin: 0;
   padding: 0;
-  background: #18185e;
-  background: linear-gradient(360deg, rgba(24, 24, 94, 1) 0%, rgba(43, 43, 48, 1) 100%);
+  /* background: #18185e;
+  background: linear-gradient(360deg, rgba(24, 24, 94, 1) 0%, rgba(43, 43, 48, 1) 100%); */
 }

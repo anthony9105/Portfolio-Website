@@ -10,6 +10,30 @@ function App() {
     <>
       <MyNavbar/>
       <ShrinkingHero/>
+        <section>
+        <ul>
+            <li className='text-white'>Hi</li>
+            <li>Hi</li><li>Hi</li><li>Hi</li><li>Hi</li><li>Hi</li>
+            <li>Hi</li><li>Hi</li><li>Hi</li><li>Hi</li><li>Hi</li>
+            <li>Hi</li>
+            <li>Hi</li><li>Hi</li><li>Hi</li><li>Hi</li><li>Hi</li>
+            <li>Hi</li>
+            <li>Hi</li><li>Hi</li><li>Hi</li><li>Hi</li><li>Hi</li><li>Hi</li>
+            <li>Hi</li>
+            <li>Hi</li>
+            <li>Hi</li><li>Hi</li><li>Hi</li><li>Hi</li><li>Hi</li><li>Hi</li><li>Hi</li><li>Hi</li>
+            <li>Hi</li>
+            <li>Hi</li><li>Hi</li><li>Hi</li><li>Hi</li><li>Hi</li><li>Hi</li><li>Hi</li><li>Hi</li>
+            <li>Hi</li><li>Hi</li><li>Hi</li><li>Hi</li><li>Hi</li><li>Hi</li><li>Hi</li><li>Hi</li>
+            <li>Hi</li>
+            <li>Hi</li><li>Hi</li><li>Hi</li><li>Hi</li><li>Hi</li><li>Hi</li><li>Hi</li><li>Hi</li>
+            <li>Hi</li><li>Hi</li><li>Hi</li><li>Hi</li><li>Hi</li><li>Hi</li><li>Hi</li><li>Hi</li>
+            <li>Hi</li>
+            <li>Hi</li><li>Hi</li><li>Hi</li><li>Hi</li><li>Hi</li><li>Hi</li><li>Hi</li><li>Hi</li>
+            <li>Hi</li>
+            <li>Hi</li><li>Hi</li><li>Hi</li><li>Hi</li><li>Hi</li><li>Hi</li><li>Hi</li><li>Hi</li>
+        </ul>
+      </section>
     </>
   )
 }
