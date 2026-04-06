@@ -2,6 +2,7 @@ import { useState } from 'react';
 import './App.css';
 import MyNavbar from './components/MyNavbar';
 import ShrinkingHero from './components/ShrinkingHero';
+import Resume from './components/Resume';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -10,6 +11,7 @@ function App() {
     <>
       <MyNavbar/>
       <ShrinkingHero/>
+      <Resume/>
         <section>
         <ul>
             <li className='text-white'>Hi</li>
