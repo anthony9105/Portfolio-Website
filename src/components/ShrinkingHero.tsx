@@ -16,7 +16,7 @@ export default function ShrinkingHero() {
 //   );
   const height: MotionValue<number> = useTransform(
     scrollYProgress,
-    [0, 0.5],
+    [0, 0.65],
     // [0, MAX_HEIGHT - MIN_HEIGHT],
     [MAX_HEIGHT, MIN_HEIGHT]
   );
