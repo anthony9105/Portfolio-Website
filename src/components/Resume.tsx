@@ -5,11 +5,13 @@ import cscLogo from '../assets/CSC-logo.png';
 export default function Resume() {
     return (
         <div className='background'>
-            {/* <div className="resume-title-text">Resume</div> */}
 
+            {/* Wrapper to use the width of the largest of all the entries */}
             <div className='max-width-wrapper'>
+                {/* Education/degree */}
                 <div className="education-title-text">Education</div>
 
+                {/* Education entry */}
                 <div className='education-entry'>
 
                     <a href='https://ontariotechu.ca/' target='_blank' className='img-container'>
@@ -32,8 +34,11 @@ export default function Resume() {
 
                 </div>
 
+
+                {/* Work experience */}
                 <div className="education-title-text">Work Experience</div>
 
+                {/* Work experience entry */}
                 <div className='education-entry'>
 
                     <a href='https://www.canadiansoccerclub.com' target='_blank' className='img-container'>
@@ -55,7 +60,10 @@ export default function Resume() {
                     </div>
 
                 </div>
+
+
             </div>
+            
         </div>
     );
 }

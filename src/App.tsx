@@ -10,9 +10,13 @@ function App() {
   return (
     <>
       <MyNavbar/>
+      
       <ShrinkingHero/>
+
+      {/* "Resume" = Education/degree and work experience */}
       <Resume/>
-        <section>
+    
+      <section>
         <ul>
             <li className='text-white'>Hi</li>
             <li>Hi</li><li>Hi</li><li>Hi</li><li>Hi</li><li>Hi</li>
