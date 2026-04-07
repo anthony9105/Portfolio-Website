@@ -1,25 +1,62 @@
 import { motion, useScroll, useTransform, MotionValue } from 'framer-motion';
 import './ShrinkingHero.css';
+import { useEffect, useState } from 'react';
 
 
-const MAX_HEIGHT: number = 600; // px, initial hero height
+const MAX_HEIGHT: number = 875; // px, initial hero height
 const MIN_HEIGHT: number = 64;  // px, minimum hero height on scroll
 
 
 export default function ShrinkingHero() {
   const { scrollYProgress } = useScroll();
 
-//   const height = useTransform(
-//     scrollYProgress, 
-//     [0, 0.2], 
-//     ["500vh", "64px"],
-//   );
-  const height: MotionValue<number> = useTransform(
-    scrollYProgress,
-    [0, 0.65],
-    // [0, MAX_HEIGHT - MIN_HEIGHT],
-    [MAX_HEIGHT, MIN_HEIGHT]
+  // const [maxHeight, setMaxHeight] = useState<number>(0);
+
+  // // Calculate 90% of screen height
+  // useEffect(() => {
+  //   const updateHeight = () => {
+  //     setMaxHeight(window.innerHeight * 0.9);
+  //   };
+
+  //   updateHeight(); // run once
+  //   window.addEventListener('resize', updateHeight);
+
+  //   return () => {
+  //     window.removeEventListener('resize', updateHeight);
+  //   };
+  // }, []);
+
+  // const height: MotionValue<number> = useTransform(
+  //   scrollYProgress,
+  //   [0, 0.65],
+  //   // [0, MAX_HEIGHT - MIN_HEIGHT],
+  //   // [MAX_HEIGHT, MIN_HEIGHT]
+  //   [maxHeight, MIN_HEIGHT]
+  // );
+
+  const [maxHeight, setMaxHeight] = useState<number>(
+    window.innerHeight * 0.9 // start correct immediately
   );
+
+  // Update on resize
+  useEffect(() => {
+    const updateHeight = () => {
+      setMaxHeight(window.innerHeight * 0.9);
+    };
+
+    window.addEventListener('resize', updateHeight);
+
+    return () => {
+      window.removeEventListener('resize', updateHeight);
+    };
+  }, []);
+
+  // FUNCTION-BASED transform
+  const height = useTransform(scrollYProgress, (value) => {
+    const progress = Math.min(value / 0.5, 1);
+
+    return maxHeight - progress * (maxHeight - MIN_HEIGHT);
+  });
 
   const textColour: string = 'rgba(255, 255, 255, 0.7)';
   const nameTextColour: string = 'rgba(255, 255, 255, 1)';
