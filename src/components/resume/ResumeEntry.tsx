@@ -1,3 +1,5 @@
+import { LogoIcon } from "../LogoIcon";
+
 export type ResumeEntryProps = {
     id: number,
 
@@ -25,13 +27,7 @@ export default function ResumeEntry({
 }: ResumeEntryProps) {
     return (
         <div className='education-entry'>
-            <a href={link} target='_blank' className='img-container' rel="noopener noreferrer">
-                <img
-                    className='education-entry-logo'
-                    src={logo}
-                    alt={alt}
-                />
-            </a>
+            <LogoIcon logo={logo} link={link} alt={alt}></LogoIcon>
 
             <div className='education-right-group'>
                 <div className='education-school-year-column'>

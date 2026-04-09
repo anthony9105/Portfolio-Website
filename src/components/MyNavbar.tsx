@@ -9,7 +9,7 @@ export default function MyNavbar() {
         <Navbar.Brand href="#home">Anthony</Navbar.Brand> 
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="w-100 justify-content-evenly">
-            <Nav.Link href="#blog">Work</Nav.Link>
+            <Nav.Link href="#blog">Portfolio</Nav.Link>
             <Nav.Link href="#about">Qualifications</Nav.Link>
           </Nav>
         </Navbar.Collapse>
