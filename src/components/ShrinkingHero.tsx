@@ -10,30 +10,6 @@ const MIN_HEIGHT: number = 64;  // px, minimum hero height on scroll
 export default function ShrinkingHero() {
   const { scrollYProgress } = useScroll();
 
-  // const [maxHeight, setMaxHeight] = useState<number>(0);
-
-  // // Calculate 90% of screen height
-  // useEffect(() => {
-  //   const updateHeight = () => {
-  //     setMaxHeight(window.innerHeight * 0.9);
-  //   };
-
-  //   updateHeight(); // run once
-  //   window.addEventListener('resize', updateHeight);
-
-  //   return () => {
-  //     window.removeEventListener('resize', updateHeight);
-  //   };
-  // }, []);
-
-  // const height: MotionValue<number> = useTransform(
-  //   scrollYProgress,
-  //   [0, 0.65],
-  //   // [0, MAX_HEIGHT - MIN_HEIGHT],
-  //   // [MAX_HEIGHT, MIN_HEIGHT]
-  //   [maxHeight, MIN_HEIGHT]
-  // );
-
   const [maxHeight, setMaxHeight] = useState<number>(
     window.innerHeight * 0.9 // start correct immediately
   );
