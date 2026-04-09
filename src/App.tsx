@@ -2,7 +2,7 @@ import { useState } from 'react';
 import './App.css';
 import MyNavbar from './components/MyNavbar';
 import ShrinkingHero from './components/ShrinkingHero';
-import Resume from './components/Resume';
+import Resume from './components/resume/Resume';
 
 function App() {
   const [count, setCount] = useState(0);

@@ -121,3 +121,10 @@
 
     justify-content: flex-start;
 }
+
+hr {
+    border: none;
+    height: 10px;
+    color: white;
+    background-color: white;
+}
