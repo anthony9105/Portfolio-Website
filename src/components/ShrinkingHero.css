@@ -1,9 +1,9 @@
 #root-div {
     margin-top: 56px;
     padding-top: 64px;
-    background-image: url('../assets/header-13.png'), linear-gradient(-135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+    background-image: url('../assets/header-13-v2.png'), linear-gradient(-135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
     background-size: contain, cover;
-    background-position: 70% center, center;
+    background-position: 85% center, center;
     background-repeat: no-repeat, no-repeat;       
     position: relative;
     opacity: 0.98;
