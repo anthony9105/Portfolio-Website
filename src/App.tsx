@@ -3,9 +3,10 @@ import './App.css';
 import MyNavbar from './components/MyNavbar';
 import ShrinkingHero from './components/ShrinkingHero';
 import Resume from './components/resume/Resume';
+import PortfolioSection from './components/portfolio/PortfolioSection';
 
 function App() {
-  const [count, setCount] = useState(0);
+  // const [count, setCount] = useState(0);
 
   return (
     <>
@@ -15,6 +16,8 @@ function App() {
 
       {/* "Resume" = Education/degree and work experience */}
       <Resume/>
+
+      <PortfolioSection/>
     
       <section>
         <ul>

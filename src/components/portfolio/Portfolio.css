@@ -1,0 +1,109 @@
+.entry-title {
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+    max-width: 420px;
+    text-align: center;
+}
+
+.preview-text-container {
+    background-image: linear-gradient(270deg, var(--color-primary-low-opacity) 0%, var(--color-primary-dark-low-opacity) 100%);
+    width: 100%;
+    border-radius: 35px;
+    padding-left: 20px;
+    padding-right: 0px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    /* justify-content: center;
+    align-items: center; */
+}
+
+.preview-img-container {
+    border-radius: 55px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    min-width: 370px;
+    max-width: 400px;
+    height: 400px;
+    background-image: linear-gradient(180deg, rgb(43, 47, 58, 0.7) 0%, rgb(26, 29, 38, 0.7) 100%);
+    cursor: pointer;
+}
+
+.preview-text-title {
+    font-size: 15px;
+    font-weight: bold;
+    max-width: 420px;
+    margin-bottom: 4px;
+}
+
+.description {
+    font-size: 13px;
+    max-width: 420px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.preview-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 55px;
+}
+
+.entry-outer-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: max-content;
+    column-gap: 30px;
+}
+
+.title-hint-text {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.5);
+    text-align: center;
+    padding: 0px;
+    margin: 0px;
+    margin-bottom: 25px;
+}
+
+.portfolio-title-text {
+    color: white;
+    font-size: 46px;
+    font-weight: bold;
+    text-align: center;
+    padding: 0px;
+    margin: 0px;
+}
+
+.portfolio-background {
+    padding: 1.5% 4% 3% 4%;
+    background-image: linear-gradient(360deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 1);
+    opacity: 98%;
+    height: max-content;
+}
+
+.source-link {
+    height: auto;
+    width: 75px;
+    object-fit: contain;
+    border-radius: 15px;
+}
+
+.available-here-text {
+    margin-top: 12px;
+    text-align: center;
+    margin-right: 20px;
+    font-style: italic;
+    font-size: 13.5px;
+}
+
+.links-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+}
