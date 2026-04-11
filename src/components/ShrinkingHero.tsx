@@ -46,14 +46,16 @@ export default function ShrinkingHero() {
           <h4>Software Developer</h4>
         </div>
 
-        <div className='social-media-row'>
-          <LogoIcon logo={linkedInLogo} alt='LinkedIn' link='https://www.linkedin.com/in/anthony-liscio' size={100}></LogoIcon>
-          <LogoIcon logo={gitHubLogo} alt='GitHub' link='https://github.com/anthony9105' size={100}></LogoIcon>
-        </div>
-        
-        <div style={{display: 'flex', flexDirection: 'row'}}>
-          <button className='rounded see-button'>See Portfolio</button>
-          <button className='rounded see-button'>See Qualifications</button>
+        <div className='social-media-and-see-buttons-wrapper'>
+          <div className='social-media-row'>
+            <LogoIcon logo={linkedInLogo} alt='LinkedIn' link='https://www.linkedin.com/in/anthony-liscio' size={100}></LogoIcon>
+            <LogoIcon logo={gitHubLogo} alt='GitHub' link='https://github.com/anthony9105' size={100}></LogoIcon>
+          </div>
+          
+          <div className='see-button-wrapper'>
+            <button className='rounded see-button'>See Portfolio</button>
+            <button className='rounded see-button'>See Qualifications</button>
+          </div>
         </div>
 
       </div>
