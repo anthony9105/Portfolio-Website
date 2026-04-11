@@ -15,12 +15,27 @@ const defaultLinkIconProps = {
 };
 
 
+// Auto IMPORT ALL CSC IMAGES (sorted)
+const cscImages: string[] = Object.entries(
+    import.meta.glob('../../assets/portfolio/CSC/*.{png,jpg,jpeg}', {
+        eager: true,
+        import: 'default'
+    })
+)
+.sort(([a], [b]) => a.localeCompare(b))   // alphabetical order
+.map(([, value]) => value as string);
+
+
+
+// create seperate type  for data (no onImageClick)
+// type PortfolioData = Omit<PortfolioEntryProps, 'onImageClick'>;
+
 const portfolioData: PortfolioEntryProps[] = [
     {
         id: 1,
 
         title: 'Canadian Soccer Club',
-        previewImage: previewImg1,
+        images: cscImages,
         previewTitle: 'Mobile App, Website, Backend, Database, Cloud Services',
         description: 'Redesigned and developed mobile app and website with 2,700+ registered players, including 300+ active users in the past year, improving usability and engagement.',
         links: [
@@ -55,10 +70,11 @@ export default function PortfolioSection() {
         <div className='portfolio-background'>
             <div className='portfolio-title-text'>Portfolio</div>
             <div className='title-hint-text'>Click on an image to see more</div>
+
             {portfolioData.map((pItem) => (
                 <PortfolioEntry
                     key={pItem.id} 
-                    {...pItem}                  
+                    {...pItem}               
                 />
             ))}
         </div>
