@@ -1,5 +1,5 @@
 import './Resume.css';
-import otuLogo from '../../assets/Otu-logo6.png';
+import otuLogo from '../../assets/otu-logo6.png';
 import cscLogo from '../../assets/CSC-logo.png';
 import ResumeEntry, { type ResumeEntryProps } from './ResumeEntry';
 import ResumeSection from './ResumeSection';
