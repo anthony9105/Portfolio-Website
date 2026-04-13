@@ -1,6 +1,7 @@
 import './LogoIcon.css';
 
 
+
 export type LogoIconProps = {
     link: string;
     alt: string;
