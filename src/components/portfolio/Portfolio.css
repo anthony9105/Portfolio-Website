@@ -108,6 +108,7 @@
     margin-right: 20px;
 }
 
+
 .lightbox {
     position: fixed;
     top: 10px;
@@ -121,24 +122,74 @@
     align-items: center;
     justify-content: center;
 
-    gap: 20px;
-    z-index: 999;
+    overflow: hidden;
+    z-index: 1000;
+
+    gap: 40px;
 }
 
-.lightbox-img {
-    width: 56%;
-    height: 86%;
-    object-fit: contain;
-    background-color: rgba(255, 255, 255, 0.01);
+/* container for image positioning */
+.zoomed-img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
 
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 35px;
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+
+    transition: transform 0.2s ease;
+    cursor: zoom-in;
+
+    will-change: transform;
+}
+
+
+.lightbox-img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+
+    transition: transform 0.2s ease;
+    will-change: transform;
+}
+
+.lightbox-img.not-zoomed {
+    cursor: zoom-in;
+}
+
+.lightbox-img.zoomed {
+    cursor: zoom-out;
 }
 
 .arrow-background {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
     background-color: transparent;
-    /* background-color: white; */
-    width: 8%;
+    width: clamp(65px, 11vh, 95px);
+    height: clamp(60px, 10vh, 90px);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 10;
+
+    cursor: pointer;
+}
+
+.arrow-left {
+    left: 8%;
+}
+
+.arrow-right {
+    right: 8%;
 }
 
 .arrow-background:hover {
