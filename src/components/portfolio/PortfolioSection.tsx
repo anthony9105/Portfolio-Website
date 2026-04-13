@@ -5,7 +5,7 @@ import gitHubIcon from '../../assets/github-icon-dark.png';
 
 
 const linksIconSize: number = 75;
-const linksBorderRadius: number = 15;
+const linksBorderRadius: number = 17.5;
 
 
 const defaultLinkIconProps = {

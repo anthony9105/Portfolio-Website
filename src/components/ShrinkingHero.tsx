@@ -79,9 +79,19 @@ export default function ShrinkingHero({ lockedHeight, setLockedHeight }: Shrinki
       behavior: "smooth"
     });
   };
+
   
   return (
-    <motion.div id='root-div' style={{ height: lockedHeight ? "94vh" : height }}>
+    <motion.div 
+      id='root-div' 
+      style={{
+        height: lockedHeight
+          ? "94vh"
+          : isMobile
+            ? "94vh"
+            : height
+      }}
+    >
       <div id='title-text-div'>
         <div id='title-intro'>
           <h2>Hi, I'm</h2>

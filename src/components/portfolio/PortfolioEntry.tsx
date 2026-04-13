@@ -172,7 +172,7 @@ export function PortfolioEntry({
 
                 <div className='links-row'>
                     {links.map((linkItem, index) => (
-                        <LogoIcon key={index} {...linkItem} size={isMobile ? 70 : undefined} borderRadius={isMobile ? 25 : undefined} />
+                        <LogoIcon key={index} {...linkItem} size={isMobile ? 70 : linkItem.size} borderRadius={isMobile ? 25 : linkItem.borderRadius} />
                     ))}
                 </div>
             </div>
