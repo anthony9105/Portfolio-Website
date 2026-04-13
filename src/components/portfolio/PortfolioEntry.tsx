@@ -5,6 +5,8 @@ import { useState, useEffect } from "react";
 import arrowRight from '../../assets/icons/arrow-right-solid-full-3.svg';
 import arrowLeft from '../../assets/icons/arrow-left-solid-full-3.svg';
 
+const MAX_CHARS: number = 120;
+
 
 export type PortfolioEntryProps = {
     id: number,
@@ -36,6 +38,13 @@ export function PortfolioEntry({
     const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
     const [zoom, setZoom] = useState(1);
     const [offset, setOffset] = useState({ x: 0, y: 0 }); // offset from center (for zoom-to-point)
+    const [expanded, setExpanded] = useState(false);
+
+
+    const isLong = description.length > MAX_CHARS;
+    const displayText = expanded
+    ? description
+    : description.slice(0, MAX_CHARS);
 
 
     // EFFECTS
@@ -151,23 +160,43 @@ export function PortfolioEntry({
     };
 
 
+    const hasImages: boolean = images && images.length > 0;
+
+
     // RENDER
     return (
         <div className='entry-outer-wrapper'>
             <div className='entry-title'>{title}</div>
 
             {/* PREVIEW */}
-            <PreviewImage 
-                previewImg={images[0]} 
-                onClick={() => {
-                    setSelectedIndex(0);
-                    resetZoom();
-                }}
-            />
+            {hasImages && (
+                <PreviewImage 
+                    previewImg={images[0]} 
+                    onClick={() => {
+                        if (!hasImages) return;
+
+                        setSelectedIndex(0);
+                        resetZoom();
+                    }}
+                />
+            )}
 
             <div className='preview-text-container'>
                 <div className='preview-text-title'>{previewTitle}</div>
-                <div className='description'>{description}</div>
+                {/* <div className='description'>{description}</div> */}
+                <div className='description'>
+                {displayText}
+                    {!expanded && isLong && "... "}
+                    
+                    {isLong && (
+                        <span
+                        className="see-more"
+                        onClick={() => setExpanded(!expanded)}
+                        >
+                        {expanded ? " See less" : " See more"}
+                        </span>
+                    )}
+                </div>
                 <div className='available-here-text'>Available Here</div>
 
                 <div className='links-row'>
@@ -178,7 +207,7 @@ export function PortfolioEntry({
             </div>
 
             {/* LIGHTBOX */}
-            {selectedIndex !== null && (
+            {hasImages && selectedIndex !== null && (
                 <div className="lightbox" onClick={closeLightbox}>
 
                     {/* LEFT ARROW */}

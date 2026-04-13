@@ -126,6 +126,7 @@
     /* max-height: 130px; */
     height: clamp(60px, 12vh, 130px);
     object-fit: contain;
+    margin: 0px;
 }
 
 .education-right-group {
