@@ -32,6 +32,7 @@ export function PortfolioEntry({
 }: PortfolioEntryProps) {
 
     // STATE
+    const [isMobile, setIsMobile] = useState(false);
     const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
     const [zoom, setZoom] = useState(1);
     const [offset, setOffset] = useState({ x: 0, y: 0 }); // offset from center (for zoom-to-point)
@@ -39,6 +40,12 @@ export function PortfolioEntry({
 
     // EFFECTS
     useEffect(() => {
+        const checkSize = () => {
+            setIsMobile(window.innerWidth <= 720);
+        };
+
+        checkSize();
+
         document.body.style.overflow = selectedIndex !== null ? "hidden" : "auto";
 
         return () => {
@@ -165,7 +172,7 @@ export function PortfolioEntry({
 
                 <div className='links-row'>
                     {links.map((linkItem, index) => (
-                        <LogoIcon key={index} {...linkItem} />
+                        <LogoIcon key={index} {...linkItem} size={isMobile ? 70 : undefined} borderRadius={isMobile ? 25 : undefined} />
                     ))}
                 </div>
             </div>

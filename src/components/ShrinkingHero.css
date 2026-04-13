@@ -34,21 +34,24 @@
 
 h1 {
     margin: 0px;
-    font-size: 110px;
+    /* font-size: 110px; */
+    font-size: clamp(55px, 110px, 110px);
     color: rgba(255, 255, 255, 1);
     text-shadow: 2.5px 2.5px 5px var(--color-primary);
 }
 
 h2 {
     margin: 0px;
-    font-size: 58px;
+    font-size: clamp(36px, 58px, 58px);
+    /* font-size: 58px; */
     color: rgba(255, 255, 255, 0.7);
 }
 
 h4 {
     margin-top: 30px;
     color: rgba(255, 255, 255, 0.7);
-    font-size: 28px;
+    /* font-size: 28px; */
+    font-size: clamp(21px, 28px, 28px);
 }
 
 .social-media-row {
@@ -77,4 +80,39 @@ h4 {
 .see-button-wrapper {
     display: flex;
     flex-direction: row;
+}
+
+@media (max-width: 720px) {
+    h1 {
+        font-size: 55px;
+    }
+    h2 {
+        font-size: 36px;
+    }
+    h4 {
+        font-size: 21px;
+        margin-top: 10px;
+    }
+
+    #title-text-div {
+        margin-top: 0px;
+        height: 94%;
+        justify-content: space-between;
+        margin-bottom: 0px;
+    }
+
+    .social-media-row {
+        justify-content: space-evenly;
+        gap: 0px;
+    }
+
+    .social-media-and-see-buttons-wrapper {
+        width: 100%;
+        gap: 0px;
+    }
+
+    .see-button-wrapper {
+        margin: 0px;
+        justify-content: space-evenly;
+    }
 }

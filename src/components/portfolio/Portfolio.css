@@ -78,7 +78,7 @@
 }
 
 .portfolio-background {
-    padding: 1.5% 4% 6% 4%;
+    padding: 1.5% 4% 10% 4%;
     background-color: transparent;
     /* background-image: linear-gradient(360deg, var(--color-primary) 0%, var(--color-primary-dark) 100%); */
     box-shadow: 0 8px 15px rgba(0, 0, 0, 1);
@@ -172,9 +172,9 @@
     top: 50%;
     transform: translateY(-50%);
 
-    background-color: transparent;
-    width: clamp(65px, 11vh, 95px);
-    height: clamp(60px, 10vh, 90px);
+    background-color: rgba(255, 255, 255, 0.1);
+    width: clamp(70px, 11vh, 95px);
+    height: clamp(65px, 10vh, 90px);
 
     display: flex;
     align-items: center;
@@ -195,4 +195,36 @@
 
 .arrow-background:hover {
     background-color: rgba(128, 128, 128, 0.2);
+}
+
+
+@media (max-width: 720px) {
+    .entry-outer-wrapper {
+        width: min-content;
+    }
+
+    .arrow-left {
+        left: 4%;
+    }
+
+    .arrow-right {
+        right: 4%;
+    }
+
+    .arrow-background {
+        top: 87%;
+        width: 65px;
+        height: 60px;
+    }
+
+    .lightbox-img {
+        max-width: 75%;
+        max-height: 75%;
+        top: 45%;
+    }
+
+    .links-row {
+        margin-right: 0px;
+        justify-content: space-around;
+    }
 }

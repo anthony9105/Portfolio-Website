@@ -15,31 +15,35 @@
 }
 
 .education-title-text {
-    font-size: 40px;
+    font-size: clamp(28px, 2vw, 40px);
 }
 
 .education-entry-year {
-    font-size: 26px;
+    /* font-size: 26px; */
+    font-size: clamp(18px, 1.4vw, 26px);
     font-weight: normal;
     color: rgba(255, 255, 255, 0.825);
 }
 
 .education-entry-school {
-    font-size: 22px;
+    /* font-size: 22px; */
+    font-size: clamp(16px, 1.3vw, 22px);
     font-weight: bold;
     color: grey;
     white-space: nowrap;
 }
 
 .education-entry-school-sec {
-    font-size: 14px;
+    /* font-size: 14px; */
+    font-size: clamp(12px, 1.2vw, 14px);
     font-style: italic;
     font-weight: normal;
     color: grey;
 }
 
 .education-entry-school-location {
-    font-size: 16px;
+    /* font-size: 16px; */
+    font-size: clamp(12px, 1.2vw, 16px);
     font-weight: normal;
     color: grey; 
 }
@@ -58,12 +62,14 @@
 }
 
 .education-degree-name {
-    font-size: 22px;
+    /* font-size: 22px; */
+    font-size: clamp(16px, 1.5vw, 22px);
     white-space: nowrap;
 }
 
 .education-achievement-name {
-    font-size: 20px;
+    /* font-size: 20px; */
+    font-size: clamp(14px, 1.4vw, 20px);
     color: grey;
 }
 
@@ -89,13 +95,36 @@
     border-radius: 350px;
     padding: 25px 50px;
 
-    flex: 0 1 720px;   /* wraps nicely */
+    /* flex: 0 1 720px;
     width: max-content;
+    border: 1px solid rgba(255, 255, 255, 0.5); */
+
+    flex: 1 1 720px;   
+    max-width: 720px;
+    width: 100%;      
+
     border: 1px solid rgba(255, 255, 255, 0.5);
+    box-sizing: border-box;
+}
+
+@media (max-width: 720px) {
+    .education-entry, .education-degree-name, .education-entry-school {
+        white-space: normal;
+    }
+
+    .education-entry {
+        padding: 8px 20px 8px 20px;
+        margin: 5px;
+    }
+
+    .img-container {
+        width: 70px;
+    }
 }
 
 .education-entry-logo {
-    max-height: 130px;
+    /* max-height: 130px; */
+    height: clamp(60px, 12vh, 130px);
     object-fit: contain;
 }
 
@@ -107,7 +136,8 @@
 }
 
 .img-container {
-    width: 125px;
+    /* width: 125px; */
+    width: clamp(70px, 12vw, 125px);
 }
 
 

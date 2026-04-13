@@ -1,4 +1,5 @@
 import { LogoIcon } from "../LogoIcon";
+import { useState, useEffect } from "react";
 
 export type ResumeEntryProps = {
     id: number,
@@ -25,9 +26,22 @@ export default function ResumeEntry({
     rolePrimary,
     roleSecondary
 }: ResumeEntryProps) {
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        const checkSize = () => {
+            setIsMobile(window.innerWidth <= 720);
+        };
+
+        checkSize();
+
+        window.addEventListener("resize", checkSize);
+        return () => window.removeEventListener("resize", checkSize);
+    }, []);
+
     return (
         <div className='education-entry'>
-            <LogoIcon logo={logo} link={link} alt={alt}></LogoIcon>
+            <LogoIcon logo={logo} link={link} alt={alt} size={isMobile ? 75 : undefined}></LogoIcon>
 
             <div className='education-right-group'>
                 <div className='education-school-year-column'>

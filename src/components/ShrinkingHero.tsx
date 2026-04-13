@@ -17,6 +17,7 @@ const MIN_HEIGHT: number = 64;  // px, minimum hero height on scroll
 
 
 export default function ShrinkingHero({ lockedHeight, setLockedHeight }: ShrinkingHeroProps) {
+  const [isMobile, setIsMobile] = useState(false);
   const { scrollYProgress } = useScroll();
 
 
@@ -24,9 +25,14 @@ export default function ShrinkingHero({ lockedHeight, setLockedHeight }: Shrinki
     window.innerHeight * 0.94 // start correct immediately
   );
 
-
   // Update on resize
   useEffect(() => {
+    const checkSize = () => {
+      setIsMobile(window.innerWidth <= 720);
+    };
+
+    checkSize();
+
     const updateHeight = () => {
       setMaxHeight(window.innerHeight * 0.94);
     };
@@ -85,8 +91,8 @@ export default function ShrinkingHero({ lockedHeight, setLockedHeight }: Shrinki
 
         <div className='social-media-and-see-buttons-wrapper'>
           <div className='social-media-row'>
-            <LogoIcon logo={linkedInLogo} alt='LinkedIn' link='https://www.linkedin.com/in/anthony-liscio' size={100}></LogoIcon>
-            <LogoIcon logo={gitHubLogo} alt='GitHub' link='https://github.com/anthony9105' size={100}></LogoIcon>
+            <LogoIcon logo={linkedInLogo} alt='LinkedIn' link='https://www.linkedin.com/in/anthony-liscio' size={isMobile ? 70 : 100}></LogoIcon>
+            <LogoIcon logo={gitHubLogo} alt='GitHub' link='https://github.com/anthony9105' size={isMobile ? 70 : 100}></LogoIcon>
           </div>
           
           <div className='see-button-wrapper'>
