@@ -33,7 +33,17 @@ const cscImages: string[] = Object.entries(
 
 
 const hpbImages: string[] = Object.entries(
-    import.meta.glob('../../assets/portfolio/HPB/*.{png,jpg,jpeg}', {
+    import.meta.glob('../../assets/portfolio/HPB/*.{png,PNG,JPG,jpg,jpeg}', {
+        eager: true,
+        import: 'default'
+    })
+)
+.sort(([a], [b]) => a.localeCompare(b))
+.map(([, value]) => value as string);
+
+
+const apcImages: string[] = Object.entries(
+    import.meta.glob('../../assets/portfolio/APC/*.{png,PNG,JPG,jpg,jpeg}', {
         eager: true,
         import: 'default'
     })
@@ -78,9 +88,26 @@ const portfolioData: PortfolioEntryProps[] = [
             }
         ],
     },
-
     {
         id: 2,
+
+        title: 'AI PokéCoach',
+        images: apcImages,
+        previewTitle: 'Personal Project',
+        description : 'Web app that lets users search for Pokémon and get AI-powered analysis, including strengths, weaknesses, and recommended team members for competetive battles.',
+        links: [
+            {
+                logo: gitHubIcon,
+                link: 'https://github.com/anthony9105/AIPokemonCoach',
+                title: 'Documentation',
+                alt: 'GitHub Documentation',
+                ...defaultLinkIconProps
+            },
+        ],
+    },
+
+    {
+        id: 3,
 
         title: 'Hockey Player Builder',
         images: hpbImages,
@@ -105,7 +132,7 @@ const portfolioData: PortfolioEntryProps[] = [
     },
 
     {
-        id: 3,
+        id: 4,
 
         title: 'Other Projects',
         images: [],
