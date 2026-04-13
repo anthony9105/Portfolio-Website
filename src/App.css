@@ -48,3 +48,9 @@ html, body, #root {
   /* background: #18185e;
   background: linear-gradient(360deg, rgba(24, 24, 94, 1) 0%, rgba(43, 43, 48, 1) 100%); */
 }
+
+.resume-portfolio-background {
+  background-image: linear-gradient(360deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 1);
+  opacity: 98%;
+}

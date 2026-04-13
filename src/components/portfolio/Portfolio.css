@@ -78,10 +78,11 @@
 }
 
 .portfolio-background {
-    padding: 1.5% 4% 3% 4%;
-    background-image: linear-gradient(360deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+    padding: 1.5% 4% 6% 4%;
+    background-color: transparent;
+    /* background-image: linear-gradient(360deg, var(--color-primary) 0%, var(--color-primary-dark) 100%); */
     box-shadow: 0 8px 15px rgba(0, 0, 0, 1);
-    opacity: 98%;
+    /* opacity: 98%; */
     height: max-content;
 }
 

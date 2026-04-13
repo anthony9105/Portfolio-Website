@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import './App.css';
 import MyNavbar from './components/MyNavbar';
 import ShrinkingHero from './components/ShrinkingHero';
@@ -6,43 +5,17 @@ import Resume from './components/resume/Resume';
 import PortfolioSection from './components/portfolio/PortfolioSection';
 
 function App() {
-  // const [count, setCount] = useState(0);
-
   return (
     <>
       <MyNavbar/>
       
       <ShrinkingHero/>
 
-      {/* "Resume" = Education/degree and work experience */}
-      <Resume/>
+      <div className='resume-portfolio-background'>
+        <Resume/>
 
-      <PortfolioSection/>
-    
-      <section>
-        <ul>
-            <li className='text-white'>Hi</li>
-            <li>Hi</li><li>Hi</li><li>Hi</li><li>Hi</li><li>Hi</li>
-            <li>Hi</li><li>Hi</li><li>Hi</li><li>Hi</li><li>Hi</li>
-            <li>Hi</li>
-            <li>Hi</li><li>Hi</li><li>Hi</li><li>Hi</li><li>Hi</li>
-            <li>Hi</li>
-            <li>Hi</li><li>Hi</li><li>Hi</li><li>Hi</li><li>Hi</li><li>Hi</li>
-            <li>Hi</li>
-            <li>Hi</li>
-            <li>Hi</li><li>Hi</li><li>Hi</li><li>Hi</li><li>Hi</li><li>Hi</li><li>Hi</li><li>Hi</li>
-            <li>Hi</li>
-            <li>Hi</li><li>Hi</li><li>Hi</li><li>Hi</li><li>Hi</li><li>Hi</li><li>Hi</li><li>Hi</li>
-            <li>Hi</li><li>Hi</li><li>Hi</li><li>Hi</li><li>Hi</li><li>Hi</li><li>Hi</li><li>Hi</li>
-            <li>Hi</li>
-            <li>Hi</li><li>Hi</li><li>Hi</li><li>Hi</li><li>Hi</li><li>Hi</li><li>Hi</li><li>Hi</li>
-            <li>Hi</li><li>Hi</li><li>Hi</li><li>Hi</li><li>Hi</li><li>Hi</li><li>Hi</li><li>Hi</li>
-            <li>Hi</li>
-            <li>Hi</li><li>Hi</li><li>Hi</li><li>Hi</li><li>Hi</li><li>Hi</li><li>Hi</li><li>Hi</li>
-            <li>Hi</li>
-            <li>Hi</li><li>Hi</li><li>Hi</li><li>Hi</li><li>Hi</li><li>Hi</li><li>Hi</li><li>Hi</li>
-        </ul>
-      </section>
+        <PortfolioSection/>
+      </div>
     </>
   )
 }
