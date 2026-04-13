@@ -40,7 +40,7 @@ const workData: ResumeEntryProps[] = [
 
 export default function Resume() {
     return (
-        <div className='background'>
+        <div className='background' id='qualifications'>
             {/* Manual way */}
             {/* <ResumeSection title='Education'>
                 <ResumeEntry 

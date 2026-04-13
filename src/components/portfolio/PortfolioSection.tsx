@@ -1,6 +1,5 @@
 import { PortfolioEntry, type PortfolioEntryProps } from "./PortfolioEntry";
 import cscIcon from '../../assets/portfolio/CSC/csc-w-background.jpg';
-import previewImg1 from '../../assets/portfolio/CSC/1_home_screen_2.png';
 import webIcon from '../../assets/web-icon.png';
 import gitHubIcon from '../../assets/github-icon-dark.png';
 
@@ -67,7 +66,7 @@ const portfolioData: PortfolioEntryProps[] = [
 
 export default function PortfolioSection() {
     return (
-        <div className='portfolio-background'>
+        <div className='portfolio-background' id='portfolio'>
             <div className='portfolio-title-text'>Portfolio</div>
             <div className='title-hint-text'>Click on an image to see more</div>
 
