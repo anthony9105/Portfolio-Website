@@ -94,7 +94,7 @@ const portfolioData: PortfolioEntryProps[] = [
         title: 'AI PokéCoach',
         images: apcImages,
         previewTitle: 'Personal Project',
-        description : 'Web app that lets users search for Pokémon and get AI-powered analysis, including strengths, weaknesses, and recommended team members for competetive battles.',
+        description : 'Web app that lets users search for Pokémon and get AI-powered analysis, including strengths, weaknesses, and recommended team members for competitive battles.',
         links: [
             {
                 logo: gitHubIcon,
